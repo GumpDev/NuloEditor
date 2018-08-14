@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none; 
+}
+
+body{
+    background-color: #282a36;
+}
+
+.header{
+    width: 100%;
+    background-color: #545167;
+    filter: drop-shadow(5px 5px 10px #111);
+    top: 0;
+    z-index:5;
+    position: fixed;
+}
+
+.shadow{
+    filter: drop-shadow(5px 5px 10px #111);
+}
+
+.drag{
+    -webkit-app-region: drag;
+    padding: 5px 5px;
+}
+
+.btnHeader{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #545167;
+    display: block;
+    color:#ccc;
+    padding: 5px 5px;
+}
+
+.btnHeader:hover{
+    text-decoration: none;
+    transition: .5s;
+    color: white;
+    cursor: pointer;
+}
+textarea:focus{
+    outline: none;
+}
+
+.panel{
+    width: 50%;
+    background-color: #444;
+    filter: drop-shadow(5px 5px 10px #111);
+    padding: 32px 32px;
+    transition: 1s;
+}
+
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=name]:focus,
+input[type=date]:focus,
+input[type=radio]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+select {
+    outline: none;
+    border-color: #fff;
+    user-select:all; 
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=name],
+input[type=radio],
+input[type=number],
+input[type=tel],
+textarea,
+select {
+    transition: .5s;
+    background-color: #333;
+    border: 2px solid #999;
+    font-size: 16px;
+    color: white;
+    width: 99%;
+    user-select:all; 
+    resize: none;
+}
+
+input[type=submit] {
+    background-color: #555;
+    border: 1px solid #999;
+    padding: 20px 20px;
+    color: white;
+    font-size: 16px;
+    transition: .5s;
+    text-decoration: none;
+    width: 98%;
+}
+
+input[type=submit]:hover {
+    background-color: #777;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/*TransiÃ§Ã£o*/
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; } 
+}
+@-moz-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+} 
+.fadeIn {
+transition: .5s;
+}
+    
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #2a2734;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #545167;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}

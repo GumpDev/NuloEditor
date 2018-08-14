@@ -1,0 +1,20 @@
+{
+  "name": "nuloeditor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GumpFlash",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.39.2",
+    "electron": "^2.0.7",
+    "electron-packager": "^12.1.0",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  }
+}

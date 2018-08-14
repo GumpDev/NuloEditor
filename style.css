@@ -12,10 +12,69 @@ body{
 .header{
     width: 100%;
     background-color: #545167;
-    filter: drop-shadow(5px 5px 10px #111);
     top: 0;
     z-index:5;
     position: fixed;
+}
+
+.headerDois{
+    width: 100%;
+    background-color: #43424d;
+    top: 35px;
+    z-index:5;
+    position: fixed;
+}
+
+.menu{
+    background-color: #79788a;
+    top: 65px;
+    left: 0;
+    color:black;
+    position: absolute;
+    width: 150px;
+    transition: .5s;
+}
+
+.menuBtn{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #79788a;
+    display: block;
+    color:#ccc;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 5px;
+}
+
+.menuBtn:hover{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #b4b3be;
+    display: block;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btnMenu{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #43424d;
+    display: block;
+    color:#ccc;
+    font-size: 14px;
+    float: left;
+    padding: 5px 7px;
+}
+
+.btnMenu:hover{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #b4b3be;
+    display: block;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .shadow{

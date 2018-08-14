@@ -50,3 +50,26 @@ function verify(){
     if(myCodeMirror.getValue() !== contentcache)
     document.getElementById('title').innerText = filename + "(unsaved)";
 }
+
+function closeMenu(){
+    if(open){
+        fileMenu(false);
+    }
+}
+
+var open = false;
+
+function fileMenu(bool){
+    var tabMenu = document.getElementById('menu1');
+    if(bool){
+        tabMenu.style.zIndex = 5;
+        tabMenu.style.opacity = 1;
+        open = true;
+    }else{
+        tabMenu.style.zIndex = -2;
+        tabMenu.style.opacity = 0;
+        open = false;
+    }
+}
+
+

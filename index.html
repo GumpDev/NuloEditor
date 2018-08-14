@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="script.js"></script>
-<body>
+<body onclick="closeMenu()">
+    <!-- Window Frame -->
     <div class="header">
         <table width="100%">
             <tr>
@@ -19,7 +20,22 @@
             </tr>
         </table>
     </div>
-    <center><br><br>
+    <!-- Menu -->
+    <div class="headerDois">
+        <a onclick="fileMenu(true)" class="btnMenu">File</a>
+        <a onclick="EditMenu()" class="btnMenu">Edit</a>
+        <a onclick="OptionsMenu()" class="btnMenu">Options</a>
+    </div>
+    <!-- Menu1 -->
+    <div id="menu1" class="menu" style="z-index: -5">
+        <a class="menuBtn">Create File</a>
+        <a class="menuBtn">Open File</a>
+        <a class="menuBtn">Close</a>
+        <hr>
+        <a class="menuBtn">Back to Hub</a>
+        <a class="menuBtn">Quit</a>
+    </div>
+    <center><br><br><br>
         <div id='editor' align='left'></div>
         <!-- Create a simple CodeMirror instance -->
         <script src="lib/codemirror.js"></script>

@@ -6,21 +6,47 @@
     <title>NuloEditor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="script.js"></script>
 <body>
-    <div class="header">
-        <table width="100%">
-            <tr>
-                <td width="100%"><div class="drag"><b id="title">Nulo Editor</b></div></td>
-                <td><a onclick="minimize()" class="btnHeader">_</a></td>
-                <td><a onclick="maximize()" class="btnHeader">□</a></td>
-                <td><a onclick="closeBtn()" class="btnHeader">x</a></td>
-                <td><br></td>
-            </tr>
-        </table>
+    <!-- Menu -->
+    <div class="headerDois">
+        <img src="icon.png" style="height:25px;padding: 1px 1px;display: block;float:left;">
+        <a onclick="fileMenu(true)" class="btnMenu">File</a>
+        <a onclick="EditMenu(true)" class="btnMenu">Edit</a>
+        <a onclick="HelpMenu(true)" class="btnMenu">Help</a>
+        <a onclick="closeBtn()" class="btnMenu" style="float: right">x</a>
+        <a onclick="maximize()" class="btnMenu" style="float: right">□</a>
+        <a onclick="minimize()" class="btnMenu" style="float: right">_</a>
+    </div>
+    <!-- Menu1 -->
+    <div id="menu1" class="menu" style="z-index: -5; left: 25px">
+        <a class="menuBtn">Create New File</a>
+        <a class="menuBtn">Open File...</a>
+        <hr>
+        <a class="menuBtn" onclick="save()">Save</a>
+        <a class="menuBtn" onclick="saveAs()">Save As...</a>
+        <hr>
+        <a class="menuBtn" onclick="hub();">Back to Hub</a>
+        <a class="menuBtn" onclick="quit();">Quit</a>
+    </div>
+    <!-- Menu2 -->
+    <div id="menu2" class="menu" style="z-index: -5; left: 60px">
+        <a class="menuBtn">Undo</a>
+        <a class="menuBtn">Reundo</a>
+        <hr>
+        <a class="menuBtn">Copy</a>
+        <a class="menuBtn">Cut</a>
+        <a class="menuBtn">Paste</a>
+        <hr>
+        <a class="menuBtn">Options</a>
+    </div>
+    <!-- Menu3 -->
+    <div id="menu3" class="menu" style="z-index: -5; left: 100px">
+        <a class="menuBtn">Support Us</a>
+        <a class="menuBtn">BitCodeStudios</a>
+        <a class="menuBtn">Help</a>
     </div>
     <center><br><br>
-        <div id='editor' align='left'></div>
+        <div id='editor' align='left' onclick="fileMenu(false);EditMenu(false);HelpMenu(false);"></div>
         <!-- Create a simple CodeMirror instance -->
         <script src="lib/codemirror.js"></script>
         <link rel="stylesheet" href="lib/codemirror.css">
@@ -38,8 +64,12 @@
             lineNumbers: true,
             extraKeys: {"Ctrl-Space": "autocomplete"}
             });
-            document.getElementById('editor').style.height = screen.availHeight + "px";
+            document.getElementById('editor').style.height = screen.availHeight - 100 + "px";
+            myCodeMirror.on("change", function(){
+                verify();
+            });
         </script>
+    <script src="script.js"></script>
     </center>
 </body>
 </html>

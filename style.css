@@ -3,6 +3,7 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none; 
+    -webkit-user-drag: none;
 }
 
 body{
@@ -12,20 +13,86 @@ body{
 .header{
     width: 100%;
     background-color: #545167;
-    filter: drop-shadow(5px 5px 10px #111);
     top: 0;
     z-index:5;
     position: fixed;
+}
+
+.headerDois{
+    width: 100%;
+    background-color: #545167;
+    top: 0;
+    z-index:5;
+    position: fixed;
+}
+
+.menu{
+    background-color: #79788a;
+    top: 30px;
+    left: 0;
+    color:black;
+    position: absolute;
+    width: 150px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.headerDois{
+    -webkit-app-region: drag;
+}
+
+a{
+    -webkit-app-region: no-drag;
+}
+
+.menuBtn{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #545167;
+    display: block;
+    color:#ccc;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 5px;
+    z-index: 5;
+}
+
+.menuBtn:hover{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #b4b3be;
+    display: block;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btnMenu{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #545167;
+    display: block;
+    color:#ccc;
+    font-size: 14px;
+    float: left;
+    z-index: 6;
+    padding: 5px 7px;
+}
+
+.btnMenu:hover{
+    text-decoration: none;
+    transition: .5s;
+    background-color: #b4b3be;
+    display: block;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .shadow{
     filter: drop-shadow(5px 5px 10px #111);
 }
 
-.drag{
-    -webkit-app-region: drag;
-    padding: 5px 5px;
-}
 
 .btnHeader{
     text-decoration: none;
